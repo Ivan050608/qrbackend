@@ -8,8 +8,19 @@ const app = express();
 app.use(express.json());
 
 
+// app.use(cors({
+//     origin: ["http://localhost:3000", "https://qrbackend-hvv7.onrender.com"], // Update with your frontend URL
+//     methods: "GET, POST",
+//     allowedHeaders: "Content-Type",
+// }));
+
 app.use(cors({
-    origin: ["http://localhost:3000", "https://qrbackend-hvv7.onrender.com"], // Update with your frontend URL
+    origin: [
+        "http://localhost:3000", 
+        "https://qrcodefullstack.vercel.app",
+        "https://qrcodefullstack-git-main-ivans-projects-6f166288.vercel.app",
+        "https://qrcodefullstack-ivans-projects-6f166288.vercel.app"
+    ],
     methods: "GET, POST",
     allowedHeaders: "Content-Type",
 }));
